@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NavBar</title>
+
+  <style>
+    body {
+      /* body의 바깥 여백을 없앰으로서 내비게이션 바가 페이지에 바짝 붙게 함 */
+      margin: 0;
+    }
+
+    .nav-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      /*  쓸 데 없는 공백 제거 */
+      margin: 0;
+      padding: 0;
+
+      background-color: darkslategrey;
+
+      /* 목록 기호 제거 */
+      list-style-type: none;
+    }
+
+    .nav-item {
+      padding: 15px;
+
+      /* 마우스 커서를  pointer 모양으로 변경 */
+      cursor: pointer;
+    }
+
+    /* nav-item 클래스 아래의 a 요소를 선택함 */
+    .nav-item a {
+      text-align: center;
+
+      /* 밑줄 제거 */
+      text-decoration: none;
+
+      color: white;
+    }
+
+    /*  nth-child(n)은 n번째 요소를 선택 */
+    .nav-item:nth-child(1) {
+      background-color: lightseagreen;
+    }
+
+    /*  사용자가 마우스를 올렸을때 속성 지정 */
+    .nav-item:hover {
+      background-color: grey;
+    }
+
+    /* 상단 고정 시키기 */
+    .nav-container {
+      position: fixed;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>네비게이션 바 만들기</h1>
+  </header>
+
+  <div>
+    <nav>
+      <ul class="nav-container">
+        <li class="nav-item"><a href="">FrogIT 주식회사</a></li>
+
+        <li class="nav-item"><a href="">소개</a></li>
+        <li class="nav-item"><a href="">제품</a></li>
+        <li class="nav-item"><a href="">서비스</a></li>
+        <li class="nav-item"><a href="">고객지원</a></li>
+      </ul>
+    </nav>
+  </div>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur,<br><br><br> adipisicing elit.<br><br><br> Corrupti,<br><br><br>
+      mollitia.<br><br><br> Fuga cumque delectus laboriosam,
+      pariatur fugiat error quidem necessitatibus quasi.<br><br><br> Rerum dicta quis,<br><br><br> doloremque pariatur
+      id dolore repellat cum
+      porro.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>end
+    </p>
+  </section>
+</body>
+
+</html>
