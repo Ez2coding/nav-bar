@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NavBar</title>
+
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* navi 하위의 li 만 선택한다. */
+    .navi>li {
+      float: left;
+    }
+
+    /* 메인 메뉴의 a 태그만 선택한다. (상하 좌우 거리조절) */
+    .navi>li>a {
+      padding: 10px 50px
+    }
+
+    /* 모든 a태그에 설정 */
+    li a {
+      background-color: #39f;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000000;
+      display: block;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* 마우스 오버 했을 때 색상 변경 */
+    li a:hover {
+      background-color: #33f;
+      color: white;
+    }
+
+    /* display 변경해서 설정 */
+    .navi li ul {
+      display: none;
+    }
+
+    /* 마우스를 위에 두었을때 서브메뉴 출력: 마우스 오버 했을때 ul이 block 되어 보인다. */
+    .navi li:hover ul {
+      display: block;
+    }
+
+    /* 투명도(opacity)를 변경해서 설정하기 */
+    .navi li ul {
+      opacity: 0;
+    }
+
+    /* 마스 오버했을 때 투명도 변경 및 변경 시간 1초 */
+    .navi li:hover ul {
+      opacity: 1;
+      transition: all 1s;
+    }
+
+    /* 모든 a태그를 대상ㅇ으로 트랜지션 설정하기 */
+    .navi li a {
+      transition: all 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>네비게이션 바</h1>
+
+  <ul class="navi">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">웹 개발</a>
+      <ul>
+        <li><a href="#">웹디자인</a></li>
+        <li><a href="#">HTML5</a></li>
+        <li><a href="#">JQuery</a></li>
+        <li><a href="#">웹 + 모바일</a></li>
+      </ul>
+    </li>
+    <li><a href="#">게시판</a>
+      <ul>
+        <li><a href="#">Q & A</a></li>
+        <li><a href="#">방명록</a></li>
+      </ul>
+    </li>
+    <li><a href="#">프로필</a></li>
+  </ul>
+</body>
+
+</html>
